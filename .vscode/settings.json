@@ -1,0 +1,18 @@
+{
+  "editor.rulers": [80],
+  "editor.wordWrap": "on",
+  "files.associations": {
+    "SKILL.md": "markdown",
+    "*.md": "markdown"
+  },
+  "markdown.preview.breaks": true,
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.wordWrap": "on"
+  },
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "SKILL.md": "*.md"
+  }
+}
