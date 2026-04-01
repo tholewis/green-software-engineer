@@ -1,3 +1,5 @@
+![Green Software with AI](green-software-with-ai.jpeg)
+
 # Green Software Engineer for Claude Code
 
 A Claude Code agent and skill that embeds [Green Software Foundation](https://greensoftware.foundation)
