@@ -1,4 +1,22 @@
+---
+title: "Green Software Engineer — Agent Guide"
+description: "How to use the @green-software-engineer Claude Code agent for sustainability reviews, carbon-aware architecture advice, and SCI scoring."
+category: reference
+version: "1.0.0"
+last_updated: "2026-04-07"
+audience: developers
+tags: [agent, green-software, sustainability, SCI, carbon]
+---
+
 # Green Software Engineer — Agent Guide
+
+## Prerequisites
+
+- **Claude Code** (CLI, desktop app, or IDE extension) installed and authenticated
+- The file `.claude/agents/green-software-engineer.md` present in your project root or in `~/.claude/agents/` for global use
+- No additional dependencies or API keys beyond a Claude Code subscription
+
+---
 
 ## What Is an Agent?
 
@@ -32,6 +50,8 @@ ISO-certified SCI standard.
 
 ### GSF's 8 Core Principles
 
+> **GSF** = Green Software Foundation — an industry body defining standards and best practices for sustainable software. See [greensoftware.foundation](https://greensoftware.foundation).
+
 | Principle | What it means in practice |
 |---|---|
 | **Carbon** | Emit as little CO₂ equivalent as possible per unit of work |
@@ -45,14 +65,18 @@ ISO-certified SCI standard.
 
 ### The SCI Formula (ISO 21031:2024)
 
+> **SCI** = Software Carbon Intensity — an ISO-certified metric (ISO 21031:2024) for measuring the carbon cost of software per unit of work.
+
 ```
 SCI = ((E × I) + M) / R
 ```
 
-- **E** — Energy consumed by the software (kWh)
-- **I** — Carbon intensity of that energy (gCO₂eq/kWh), location and time-based
-- **M** — Embodied carbon of the hardware being used
-- **R** — Functional unit (per request, per user, per transaction, etc.)
+| Variable | Meaning | Unit |
+|---|---|---|
+| **E** | Energy consumed by the software | kWh |
+| **I** | Carbon intensity of the electricity grid (location- and time-based) | gCO₂eq/kWh |
+| **M** | Embodied carbon of the hardware (manufacturing + disposal) | gCO₂eq |
+| **R** | Functional unit — what one "unit of work" means for your software | per request / user / transaction |
 
 The agent can help you define your functional unit, identify measurement approaches,
 and interpret your SCI score relative to industry benchmarks.

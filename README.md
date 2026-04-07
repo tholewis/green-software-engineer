@@ -16,7 +16,21 @@ sustainability practices directly into your development workflow.
 
 ---
 
+## Documentation
+
+| Page | Description |
+|---|---|
+| [Agent Guide](docs/agent-guide.md) | How to invoke `@green-software-engineer` — use cases, invocation syntax, and knowledge base |
+| [Skill Guide](docs/skill-guide.md) | How `/green-review` works — auto-trigger rules, checklist categories, and output format |
+
+---
+
 ## Quick Start
+
+### Prerequisites
+
+- **Claude Code** v1.0 or later — available as a [CLI](https://claude.ai/code), desktop app, or IDE extension (VS Code, JetBrains)
+- A Claude Code subscription (no additional API keys required)
 
 ### 1. Copy the `.claude/` folder into your project
 
@@ -68,10 +82,9 @@ Claude will automatically apply the green review checklist before responding.
 
 A senior green software engineer persona grounded in:
 
-- The **8 GSF Principles** (Carbon, Electricity, Carbon Intensity, Embodied Carbon,
-  Energy Proportionality, Networking, Demand Shaping, Measurement & Optimisation)
-- The **SCI Standard** (ISO 21031:2024) — Software Carbon Intensity formula
-- **Green Software Patterns** from patterns.greensoftware.foundation
+- The **8 GSF Principles** — GSF (Green Software Foundation) defines eight pillars: Carbon, Electricity, Carbon Intensity, Embodied Carbon, Energy Proportionality, Networking, Demand Shaping, and Measurement & Optimisation
+- The **SCI Standard** (ISO 21031:2024) — SCI (Software Carbon Intensity) is a formula for measuring how much carbon a software system emits per unit of work: `SCI = ((E × I) + M) / R`
+- **Green Software Patterns** from [patterns.greensoftware.foundation](https://patterns.greensoftware.foundation)
 
 **Example invocations:**
 

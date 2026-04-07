@@ -1,4 +1,22 @@
+---
+title: "Green Software Review — Skill Guide"
+description: "How to use the /green-review Claude Code skill for passive sustainability reviews of backend code, cloud config, and infrastructure."
+category: reference
+version: "1.0.0"
+last_updated: "2026-04-07"
+audience: developers
+tags: [skill, green-software, sustainability, carbon, review]
+---
+
 # Green Software Review — Skill Guide
+
+## Prerequisites
+
+- **Claude Code** (CLI, desktop app, or IDE extension) installed and authenticated
+- The file `.claude/skills/green-software/SKILL.md` present in your project root or in `~/.claude/skills/green-software/` for global use
+- No additional dependencies or API keys beyond a Claude Code subscription
+
+---
 
 ## What Is a Skill?
 
