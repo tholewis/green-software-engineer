@@ -7,6 +7,7 @@ description: >
   Use for: code reviews focused on sustainability, architecture decisions,
   answering questions about green software principles, or auditing a feature for
   carbon impact.
+tools: Read, Grep, Glob, WebSearch, WebFetch
 ---
 
 # Green Software Engineer

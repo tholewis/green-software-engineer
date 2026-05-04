@@ -2,10 +2,12 @@
 name: green-review
 description: >
   Reviews code, architecture, or configuration for green software practices aligned
-  with the Green Software Foundation's principles. Auto-invokes when writing new
-  API endpoints, database queries, cloud/infrastructure config, background jobs,
-  data pipelines, or caching logic. Also invokable directly with /green-review.
-  Do NOT auto-invoke for UI-only changes, documentation edits, or test-only changes.
+  with the Green Software Foundation's principles. Also invokable directly with
+  /green-review.
+when_to_use: >
+  Auto-invoke when writing new API endpoints, database queries, cloud/infrastructure
+  config, background jobs, data pipelines, or caching logic. Do NOT auto-invoke for
+  UI-only changes, documentation edits, or test-only changes.
 ---
 
 # Green Software Review

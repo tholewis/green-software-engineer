@@ -1,6 +1,6 @@
-# CLAUDE.md
+# Writing AI-Friendly Documentation
 
-This file provides guidance to Claude Code when working with documentation in this project.
+This file provides guidance for writing documentation that is easy for both humans and AI systems to use.
 
 ## Documentation Standards
 
