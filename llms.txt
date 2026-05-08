@@ -16,6 +16,7 @@ Copy `.claude/agents/green-software-engineer.md` and `.claude/skills/green-softw
 - **GSF** = Green Software Foundation — defines 8 principles for sustainable software
 - **SCI** = Software Carbon Intensity (ISO 21031:2024) — formula: `SCI = ((E × I) + M) / R`
   - E = energy consumed (kWh), I = grid carbon intensity (gCO₂eq/kWh), M = embodied carbon, R = functional unit
+- **SCI for AI** = GSF extension spec for AI systems — splits measurement into Consumer (inference/operation) and Provider (training/deployment) boundaries with AI-specific functional units (per Token, per Workflow Execution, per FLOP, per Training Token, per Parameter); mandates full training-run emissions and cascaded agentic operation accounting
 - **8 GSF Principles**: Carbon, Electricity, Carbon Intensity, Embodied Carbon, Energy Proportionality, Networking, Demand Shaping, Measurement & Optimisation
 
 ## Documentation Index
@@ -30,12 +31,13 @@ Copy `.claude/agents/green-software-engineer.md` and `.claude/skills/green-softw
 
 ## Skill Review Categories
 
-The `/green-review` skill checks five categories:
+The `/green-review` skill checks six categories:
 1. **Energy Efficiency** — loops, lazy vs eager loading, idle polling
 2. **Network Efficiency** — payload size, round trips, CDN usage
 3. **Compute & Storage** — N+1 queries, caching, storage formats
 4. **Cloud & Infrastructure** — provisioning, scale-to-zero, region carbon intensity, time-shifting
 5. **Hardware & Embodied Carbon** — utilisation, managed vs self-managed services
+6. **AI & ML Workloads** — Consumer vs Provider boundary, functional unit selection, training emissions scope, agentic cascaded operations, effective vs gross values
 
 ## Output Format (Skill)
 
@@ -54,3 +56,4 @@ Followed by a Summary: issue counts by severity, top priority fix, SCI baseline 
 - GSF Patterns Library: https://patterns.greensoftware.foundation
 - SCI Specification: https://sci.greensoftware.foundation
 - Green Software Practitioner Course: https://learn.greensoftware.foundation
+- SCI for AI Specification: https://github.com/Green-Software-Foundation/sci-ai/blob/dev/SPEC.md

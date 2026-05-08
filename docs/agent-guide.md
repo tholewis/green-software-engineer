@@ -81,6 +81,23 @@ SCI = ((E × I) + M) / R
 The agent can help you define your functional unit, identify measurement approaches,
 and interpret your SCI score relative to industry benchmarks.
 
+### SCI for AI (GSF sci-ai spec)
+
+For AI systems, the GSF's SCI for AI extension introduces two separate measurement boundaries:
+
+| Persona | Lifecycle stages covered | Suggested functional units |
+|---|---|---|
+| **Consumer** | Operation & Monitoring (inference, API, orchestration, observability, storage, UX) | Per Token (LLMs), Per Workflow Execution (Agentic), Per Image, Per Second (video), Per Inference (classical ML) |
+| **Provider** | Inception, Design & Development, Deployment, Retirement | Per FLOP, Per Training Token, Per Parameter |
+
+**Key rules the agent applies for AI workloads:**
+
+- **Training emissions** must cover the full training run — pre/mid/post-training, intermediate test runs, and early stopping — not just the final checkpoint.
+- **Agentic AI** Consumer SCI must count every triggered operation: sub-model calls, tool invocations, retrieval steps, and model-to-model exchanges.
+- **Effective vs gross values**: prefer effective values (active params after pruning, deduplicated tokens, utilised FLOPs) over gross totals when optimisations apply.
+
+See the [SCI for AI Specification](https://github.com/Green-Software-Foundation/sci-ai/blob/dev/SPEC.md) for the full spec.
+
 ---
 
 ## How to Invoke the Agent
@@ -137,4 +154,4 @@ Claude Code config instead:
 - [GSF Green Software Patterns](https://patterns.greensoftware.foundation)
 - [SCI Specification](https://sci.greensoftware.foundation)
 - [Green Software Practitioner Course](https://learn.greensoftware.foundation)
-- [SCI for AI Standard](https://greensoftware.foundation/stories/sci-for-ai/)
+- [SCI for AI Specification](https://github.com/Green-Software-Foundation/sci-ai/blob/dev/SPEC.md)

@@ -86,6 +86,15 @@ batch jobs that could be time-shifted to greener grid windows.
 Looks for: low-utilisation instances that are always on, self-managed VMs that could
 be replaced with managed/serverless alternatives.
 
+### 🤖 AI & ML Workloads
+Applies when AI/ML components are present. Looks for: incorrect Consumer vs Provider
+boundary assignment; inappropriate functional units (e.g., using per-request instead of
+per-token for an LLM service); agentic pipelines that omit cascaded operations (tool
+calls, sub-model invocations, retrieval steps) from their SCI calculation; training
+emissions that exclude intermediate runs or early stopping; gross values reported where
+effective values (pruned params, curated tokens, utilised FLOPs) would be more accurate;
+GPU/TPU idle time between batches.
+
 ---
 
 ## Output Format
@@ -192,3 +201,4 @@ Claude will load these files on demand when they're relevant to the review.
 - [GSF Green Software Patterns](https://patterns.greensoftware.foundation)
 - [SCI Specification](https://sci.greensoftware.foundation)
 - [Green Software Practitioner Course](https://learn.greensoftware.foundation)
+- [SCI for AI Specification](https://github.com/Green-Software-Foundation/sci-ai/blob/dev/SPEC.md)

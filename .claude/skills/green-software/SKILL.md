@@ -49,6 +49,21 @@ Work through these categories and flag any issues found:
 - [ ] Is hardware being fully utilised, or are there always-on instances sitting mostly idle?
 - [ ] Could a managed/serverless service replace a self-managed VM, reducing embodied overhead?
 
+### 🤖 AI & ML Workloads
+*(Skip if no AI/ML components are present)*
+- [ ] Is this an inference workload (Consumer boundary) or does it include training/deployment (Provider boundary)?
+- [ ] Is the functional unit appropriate? (Per Token for LLMs; Per Workflow Execution for agentic
+      systems; Per Image/Second/Inference for other modalities; Per FLOP/Training Token/Parameter
+      for provider training workloads)
+- [ ] For agentic pipelines: are all cascaded operations counted — sub-model calls, tool
+      invocations, retrieval steps, and model-to-model exchanges?
+- [ ] For training workloads: do emissions cover the full training duration — pre/mid/post-training,
+      intermediate test runs, and early stopping — not just the final checkpoint?
+- [ ] Are effective values used where applicable (active params after pruning, deduplicated tokens,
+      utilised FLOPs) rather than gross totals?
+- [ ] Is hardware utilisation high during training/inference, or are GPUs/TPUs sitting mostly idle
+      between batches?
+
 ## Output Format
 
 For each issue found, produce:
@@ -71,4 +86,5 @@ If the code is already well-optimised, say so clearly — false positives erode 
 
 Green Software Patterns: https://patterns.greensoftware.foundation
 SCI Specification: https://sci.greensoftware.foundation
+SCI for AI Specification: https://github.com/Green-Software-Foundation/sci-ai/blob/dev/SPEC.md
 GSF Principles: https://learn.greensoftware.foundation/practitioner/carbon-efficiency

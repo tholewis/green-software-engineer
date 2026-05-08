@@ -37,6 +37,35 @@ Software Carbon Intensity = ((E × I) + M) / R
 - M = embodied emissions of the hardware
 - R = functional unit (per user, per request, per transaction, etc.)
 
+**SCI for AI (GSF sci-ai spec)**
+The GSF's SCI for AI extension splits AI systems into two measurement personas:
+
+- **Consumer SCI** — covers the Operation & Monitoring boundary: inference, API serving,
+  orchestration, scaling, observability, storage, UX, and tool/service connectors.
+  Functional unit by modality:
+  - LLMs → per Token
+  - Agentic AI → per Workflow Execution
+  - Image generation → per Image
+  - Video generation → per Second of video
+  - Classical ML / classification → per Inference
+  - Speech recognition → per Second of audio
+  - Machine translation / TTS → per Character
+
+- **Provider SCI** — covers Inception, Design & Development, Deployment, and Retirement:
+  training infrastructure, data pipelines, evaluation, integration, and decommissioning.
+  Functional unit options: per FLOP, per Training Token, or per Parameter.
+
+Key rules:
+- Training emissions must cover the **full training run**: pre-training, mid-training,
+  post-training, intermediate test runs, and early stopping — not just the final checkpoint.
+- For agentic AI, **every triggered operation** counts toward Consumer SCI: sub-model calls,
+  tool invocations, retrieval steps, and model-to-model exchanges.
+- Prefer **effective** values (active parameters after pruning, deduplicated/curated tokens,
+  utilised FLOPs) over gross totals when optimisations apply — they give a more accurate
+  picture of actual efficiency.
+- Multiple functional units MAY be reported by providers to show efficiency across compute,
+  data, and model design dimensions simultaneously.
+
 **Green Software Patterns**
 - Caching to avoid redundant computation
 - Lazy loading and on-demand resource allocation
@@ -74,3 +103,13 @@ compliance checkbox.
 - `@green-software-engineer how would I calculate an SCI score for this service?`
 - `@green-software-engineer is polling better or worse than websockets from a green perspective?`
 - `@green-software-engineer audit this Terraform config for over-provisioning`
+- `@green-software-engineer what's the right functional unit for our agentic pipeline?`
+- `@green-software-engineer help me estimate the Consumer SCI for our LLM API service`
+- `@green-software-engineer how should we account for training emissions in our Provider SCI?`
+
+## References
+
+- Green Software Patterns: https://patterns.greensoftware.foundation
+- SCI Specification: https://sci.greensoftware.foundation
+- SCI for AI Specification: https://github.com/Green-Software-Foundation/sci-ai/blob/dev/SPEC.md
+- GSF Principles: https://learn.greensoftware.foundation/practitioner/carbon-efficiency
