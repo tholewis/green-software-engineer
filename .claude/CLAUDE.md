@@ -18,7 +18,7 @@ Copy the `.claude/` folder into the target project, or place the files under `~/
 | [`README.md`](../README.md) | Overview, quick start, and agent vs skill comparison |
 | [`docs/agent-guide.md`](../docs/agent-guide.md) | Full reference for `@green-software-engineer` — use cases, SCI formula, invocation syntax |
 | [`docs/skill-guide.md`](../docs/skill-guide.md) | Full reference for `/green-review` — auto-trigger rules, checklist, output format |
-| [`llms.txt`](../llms.txt) | AI-optimized summary of this project for LLM consumption |
+| [`docs/llms.txt`](../docs/llms.txt) | AI-optimized summary of this project for LLM consumption |
 
 ## References
 

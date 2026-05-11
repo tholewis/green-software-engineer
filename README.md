@@ -1,4 +1,4 @@
-![Green Software with AI](green-software-with-ai.jpeg)
+![Green Software with AI](docs/green-software-with-ai.jpeg)
 
 # Green Software Engineer for Claude Code
 
