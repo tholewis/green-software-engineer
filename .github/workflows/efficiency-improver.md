@@ -57,6 +57,8 @@ safe-outputs:
   update-issue:
     target: "*"
     max: 1
+  assign-to-agent:
+    model: claude-haiku-4.5
 
 tools:
   web-fetch:
