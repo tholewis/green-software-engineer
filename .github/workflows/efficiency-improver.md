@@ -21,7 +21,8 @@ on:
         COUNT=$(gh pr list --repo ${{ github.repository }} --state open --search 'in:title "[efficiency-improver]"' --json number --jq 'length')
         [[ "$COUNT" -lt "$MAX_OPEN_PRS" ]]
       # exits 0 if not scheduled or <MAX_OPEN_PRS open PRs, 1 if ≥MAX_OPEN_PRS
-
+      env: 
+        GH_TOKEN: ${{ github.token }} 
 if: needs.pre_activation.outputs.check_result == 'success'
 
 timeout-minutes: 60
