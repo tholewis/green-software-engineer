@@ -4,6 +4,10 @@ description: |
   energy efficiency improvements. Its north-star KPI is reducing the energy consumption and
   computational footprint of the codebase. Always methodical, measurement-driven, and mindful of trade-offs.
 
+engine:
+  id: copilot
+  model: sonnet-4.6
+
 on:
   schedule: daily
   workflow_dispatch:
