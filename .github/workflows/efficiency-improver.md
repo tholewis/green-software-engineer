@@ -4,10 +4,6 @@ description: |
   energy efficiency improvements. Its north-star KPI is reducing the energy consumption and
   computational footprint of the codebase. Always methodical, measurement-driven, and mindful of trade-offs.
 
-engine:
-  id: copilot
-  model: sonnet-4.6
-
 on:
   schedule: daily
   workflow_dispatch:
@@ -25,8 +21,7 @@ on:
         COUNT=$(gh pr list --repo ${{ github.repository }} --state open --search 'in:title "[efficiency-improver]"' --json number --jq 'length')
         [[ "$COUNT" -lt "$MAX_OPEN_PRS" ]]
       # exits 0 if not scheduled or <MAX_OPEN_PRS open PRs, 1 if ≥MAX_OPEN_PRS
-      env: 
-        GH_TOKEN: ${{ github.token }} 
+
 if: needs.pre_activation.outputs.check_result == 'success'
 
 timeout-minutes: 60
@@ -62,8 +57,6 @@ safe-outputs:
   update-issue:
     target: "*"
     max: 1
-  assign-to-agent:
-    model: claude-haiku-4.5
 
 tools:
   web-fetch:
@@ -72,7 +65,7 @@ tools:
   bash: true
   repo-memory: true
 
-source: githubnext/agentics/workflows/efficiency-improver.md@94ec5db57374c5b04a4b8eef8b4413f9af44d63f
+source: githubnext/agentics/workflows/efficiency-improver.md@79c99dfd73f3b7ad8ab2b0f4944838018dbe4736
 ---
 
 # Efficiency Improver
