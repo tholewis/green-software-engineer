@@ -1,0 +1,51 @@
+# Ingeniero de software verde para Claude Code
+
+> Agente y skill de Claude Code en español para integrar prácticas de la Green Software Foundation (GSF) en flujos de desarrollo.
+
+## Componentes españoles
+
+- Agente `ingeniero-software-verde`: consultoría sobre sostenibilidad, arquitectura, revisiones de código y medición SCI; seleccionar con `@` o invocar manualmente mediante `@agent-ingeniero-software-verde`.
+- Skill `/revision-verde`: revisión estructurada que puede cargarse al trabajar con backend, datos, infraestructura, cachés o IA.
+
+## Instalación
+
+Copiar `.claude/agents/ingeniero-software-verde.md` y `.claude/skills/revision-verde/SKILL.md` en el directorio `.claude/` del proyecto o en `~/.claude/` para uso global.
+
+## Conceptos principales
+
+- GSF: Green Software Foundation.
+- SCI: Intensidad de Carbono del Software, definida por ISO/IEC 21031:2024.
+- Fórmula: `SCI = ((E × I) + M) / R`.
+- E: energía; I: intensidad de carbono; M: emisiones incorporadas; R: unidad funcional.
+- SCI for AI: extensión para medir sistemas de IA desde las perspectivas del consumidor y del proveedor.
+
+## Índice documental español
+
+- `README.es.md`: descripción, inicio rápido, autoría y referencias.
+- `docs/agent-guide.es.md`: guía del agente `ingeniero-software-verde`.
+- `docs/skill-guide.es.md`: guía de `/revision-verde`.
+- `docs/writing-ai-friendly-docs.es.md`: criterios para documentación accesible para IA.
+- `.claude/agents/ingeniero-software-verde.md`: definición del agente.
+- `.claude/skills/revision-verde/SKILL.md`: definición de la skill.
+
+## Categorías de revisión
+
+1. Eficiencia energética.
+2. Eficiencia de red.
+3. Cómputo y almacenamiento.
+4. Nube e infraestructura.
+5. Hardware y carbono incorporado.
+6. Cargas de IA y ML.
+
+## Autoría
+
+- Trabajo original: Thomas Lewis, https://github.com/tholewis/green-software-engineer
+- Traducción y adaptación: Interdato Sostenibilidad Digital, https://github.com/Interdato-SostenibilidadDigital
+
+## Referencias
+
+- https://greensoftware.foundation
+- https://learn.greensoftware.foundation/es/
+- https://patterns.greensoftware.foundation
+- https://sci.greensoftware.foundation
+- https://github.com/Green-Software-Foundation/sci-ai/blob/dev/SPEC.md
